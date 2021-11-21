@@ -4,8 +4,8 @@ let count = document.querySelector("#count");
 let film = document.querySelector("#film");
 let total = document.querySelector("#total");
 let notOccupiedSeats = document.querySelectorAll(".row .seat:not(.occupied)");
-let selectBox1 = document.querySelectorAll("option").firstElementChild;
-console.log(selectBox1);
+//let selectBox1 = document.querySelectorAll("option").firstElementChild;
+//console.log(selectBox1);
 
 const storelocalStrorage = () => {
   const selectedSeats = document.querySelectorAll(".row .seat.selected");
@@ -39,11 +39,11 @@ const updateMovieInfo = () => {
   count.textContent = selectedSeatsCount;
   film.textContent =
     selectBox.options[selectBox.selectedIndex].innerText.split("(")[0];
-  selectBox.options[selectBox.selectedIndex].value;
+  //selectBox.options[selectBox.selectedIndex].value;
   total.textContent =
     selectedSeatsCount *
     parseFloat(selectBox.options[selectBox.selectedIndex].value);
-  storelocalStrorage();
+    storelocalStrorage();
 };
 
 window.addEventListener("load", () => {
